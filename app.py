@@ -130,6 +130,17 @@ if st.button("Verificar"):
 
                 dados = resposta.json()
 
+                # DEBUG DO CNPJ COM PROBLEMA
+                if cnpj == "67798721000160":
+
+                    st.subheader("🔍 DEBUG CNPJ")
+
+                    st.write("CNPJ consultado:")
+                    st.code(cnpj)
+
+                    st.write("Resposta completa da API:")
+                    st.json(dados)
+
                 situacao = dados.get(
                     "descricao_situacao_cadastral",
                     "ERRO"
