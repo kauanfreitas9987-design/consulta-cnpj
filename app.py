@@ -185,6 +185,3 @@ if st.button("Verificar"):
         file_name="resultado_cnpjs.xlsx",
         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     )
-        file_name="resultado_cnpjs.xlsx",
-        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-    )
