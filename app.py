@@ -130,17 +130,6 @@ if st.button("Verificar"):
 
                 dados = resposta.json()
 
-                # DEBUG DO CNPJ COM PROBLEMA
-                if cnpj == "67798721000160":
-
-                    st.subheader("🔍 DEBUG CNPJ")
-
-                    st.write("CNPJ consultado:")
-                    st.code(cnpj)
-
-                    st.write("Resposta completa da API:")
-                    st.json(dados)
-
                 situacao = dados.get(
                     "descricao_situacao_cadastral",
                     "ERRO"
@@ -193,6 +182,9 @@ if st.button("Verificar"):
     st.download_button(
         label="📥 Baixar Excel",
         data=excel,
+        file_name="resultado_cnpjs.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
         file_name="resultado_cnpjs.xlsx",
         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     )
